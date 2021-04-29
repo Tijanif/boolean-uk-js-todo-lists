@@ -59,20 +59,60 @@ const myUserId = Number(prompt('Please give me a user id from 1 to 10'))
 
 // Display an alert with the username and all the todos titles that belong to that user 
 
+// const list = []
+// let pickedUserName = "";
+// for(user of users) {
+//  if(myUserId === user.id) {
+//    pickedUserName = user.username;
+//  }
+// }
+
+// for(usertodo of todos){
+//     if(myUserId === usertodo.userId)
+//     list.push(`${usertodo.title}
+//     `)
+//    }    
+
+//  alert(`Hello ${pickedUserName}! here are all your todos:
+
+//     ${list}`)
+
+ // Challenge
+// After you select a user, add the option to either show the todos or add a new todo to the list
 const list = []
 let pickedUserName = "";
 for(user of users) {
  if(myUserId === user.id) {
    pickedUserName = user.username;
- }
-}
-
-for(usertodo of todos){
+  let userAnswer = prompt("What would you like to do? S to show your todos or A to add to your todos.")
+  if(userAnswer === 's'){
+   for(usertodo of todos){
     if(myUserId === usertodo.userId)
     list.push(`${usertodo.title}
     `)
-   }    
-
- alert(`Hello ${pickedUserName}! here are all your todos:
+   }  
+    alert(`Hello ${pickedUserName}! here are all your todos:
 
     ${list}`)
+  }
+  userId = myUserId
+  if(userAnswer === 'a') {
+   let addingTodo = prompt('What would you like to add?')
+ 
+    
+      todos.push({
+       userId: userId,
+       id: todos.length + 1,
+       title: addingTodo,
+       complete: false
+      });
+      console.log(todos)
+    
+   
+  }
+ }
+}
+
+
+// Challenge 2
+// // Now that you can add a todo, add the option to either delete or update a todo. Add also the option to repeatedly choose a different user, or to finish the program
