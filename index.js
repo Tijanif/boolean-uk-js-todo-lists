@@ -54,7 +54,25 @@ Now that you can add a todo, add the option to either delete or update a todo. A
 
 // Prompt the user for a user id
 
-const userId = prompt('Please give me a user id from 1 to 10')
-console.log(`Given user id: ${userId}`)
+const myUserId = Number(prompt('Please give me a user id from 1 to 10'))
+// console.log(`Given user id: ${userId}`)
 
 // Display an alert with the username and all the todos titles that belong to that user 
+
+const list = []
+let pickedUserName = "";
+for(user of users) {
+ if(myUserId === user.id) {
+   pickedUserName = user.username;
+ }
+}
+
+for(usertodo of todos){
+    if(myUserId === usertodo.userId)
+    list.push(`${usertodo.title}
+    `)
+   }    
+
+ alert(`Hello ${pickedUserName}! here are all your todos:
+
+    ${list}`)
