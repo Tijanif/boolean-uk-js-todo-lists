@@ -37,3 +37,20 @@ After you select a user, add the option to either show the todos or add a new to
 Challenge 2
 Now that you can add a todo, add the option to either delete or update a todo. Add also the option to repeatedly choose a different user, or to finish the program
 */
+
+// Create an alert that lists all users, with their ids, names and what city they're from
+
+// for (user of users) [
+// console.log(`List of users: ${user.id}
+// ${user.name}
+// ${user.address.city}`),
+//  alert(`
+// ${user.id}
+// ${user.name}
+// ${user.address.city}
+// `)
+// ]
+
+
+// Prompt the user for a user id
+// Display an alert with the username and all the todos titles that belong to that user 
