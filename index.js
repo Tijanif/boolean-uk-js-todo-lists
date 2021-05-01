@@ -59,23 +59,23 @@ const myUserId = Number(prompt('Please give me a user id from 1 to 10'))
 
 // Display an alert with the username and all the todos titles that belong to that user 
 
-// const list = []
-// let pickedUserName = "";
-// for(user of users) {
-//  if(myUserId === user.id) {
-//    pickedUserName = user.username;
-//  }
-// }
+const list = []
+let pickedUserName = "";
+for(user of users) {
+ if(myUserId === user.id) {
+   pickedUserName = user.username;
+ }
+}
 
-// for(usertodo of todos){
-//     if(myUserId === usertodo.userId)
-//     list.push(`${usertodo.title}
-//     `)
-//    }    
+for(usertodo of todos){
+    if(myUserId === usertodo.userId)
+    list.push(`${usertodo.title}
+    `)
+   }    
 
-//  alert(`Hello ${pickedUserName}! here are all your todos:
+ alert(`Hello ${pickedUserName}! here are all your todos:
 
-//     ${list}`)
+    ${list}`)
 
  // Challenge
 // After you select a user, add the option to either show the todos or add a new todo to the list
