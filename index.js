@@ -40,7 +40,7 @@ Now that you can add a todo, add the option to either delete or update a todo. A
 
 // Create an alert that lists all users, with their ids, names and what city they're from
 
-for (user of users) [
+for (user of users) {
 console.log(`List of users: ${user.id}
 ${user.name}
 ${user.address.city}`),
@@ -49,7 +49,7 @@ ${user.id}
 ${user.name}
 ${user.address.city}
 `)
-]
+}
 
 
 // Prompt the user for a user id
